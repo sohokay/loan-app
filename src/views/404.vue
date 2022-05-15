@@ -1,13 +1,13 @@
 <template>
-404
+  404
 </template>
 
 <script>
 export default {
-  name: "not-found"
+name:'no-found'
 }
 </script>
 
-<style scoped>
+<style>
 
 </style>

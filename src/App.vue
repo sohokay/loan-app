@@ -1,13 +1,10 @@
 <template>
 <div>
-  <router-view />
-  <my-layout></my-layout>
+  <router-view></router-view>
 </div>
 </template>
 <script>
-import MyLayout from "@/views/layout";
 export default {
-  components:{MyLayout},
   setup(){
     console.log(1);
   }
