@@ -1,12 +1,10 @@
 <template>
-<div>
- 首页
-</div>
+item
 </template>
 
 <script>
 export default {
-  name: "my-index"
+  name: "message-item"
 }
 </script>
 

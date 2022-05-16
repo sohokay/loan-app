@@ -1,14 +1,14 @@
 <template>
-<div>
+message
   <router-view></router-view>
-</div>
 </template>
+
 <script>
 export default {
-  setup(){
-    console.log(1);
-  }
+  name: "my-message"
 }
 </script>
-<style>
+
+<style scoped>
+
 </style>
