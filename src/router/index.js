@@ -14,11 +14,8 @@ const routes = [{
     redirect: "/index",
     children: [{
       path: "index",
-      component: () =>
-          import( /* webpackChunkName: "home" */ "../views/index"),
-      meta: {
-        noHeader: true
-      },
+      component: () => import( /* webpackChunkName: "home" */ "../views/index"),
+      meta: {noHeader: true},
     },],
   },
   {
@@ -30,8 +27,8 @@ const routes = [{
     component: Layout,
     children: [{
       path: "",
-      component: () =>
-          import( /* webpackChunkName: "login" */ "../views/wallet"),
+      component: () => import( /* webpackChunkName: "login" */ "../views/wallet"),
+      meta: {noBack: true, title: '钱包'}
     },],
   },
   {
@@ -41,6 +38,9 @@ const routes = [{
       path: "",
       component: () =>
           import( /* webpackChunkName: "login" */ "../views/customer"),
+      meta: {
+        title: '客服'
+      }
     },],
   },
   {
@@ -50,6 +50,7 @@ const routes = [{
       path: "",
       component: () =>
           import( /* webpackChunkName: "login" */ "../views/home"),
+      meta: {noHeader: true}
     },],
 
   },

@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <header>
     <template v-if="noHeader">
-      <van-nav-bar v-if="noHeader" left-text="返回" left-arrow @click-left="onClickLeft" title="标题" />
+      <van-nav-bar v-if="noHeader" :left-arrow="!noBack" @click-left="onClickLeft" :title="title" safe-area-inset-top />
     </template>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -12,6 +12,12 @@ export default {
   computed: {
     noHeader: function() {
       return !this.$route.meta.noHeader;
+    },
+    noBack: function() {
+      return this.$route.meta.noBack;
+    },
+    title:function (){
+      return this.$route.meta.title;
     }
   },
   setup() {
